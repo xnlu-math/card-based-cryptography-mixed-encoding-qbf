@@ -79,21 +79,24 @@ These checks concern the decoded positive protocols. They are not proof certific
 
 ## The formulation
 
-Alice's input $a$ is a single-card commitment, and Bob's input $b$ is a two-card commitment. For $\ell=1,\dots,k$, a protocol of the class applies a rearrangement $(\mathsf{perm},\pi_\ell)$ followed by a shuffle $(\mathsf{shuffle},\Pi_\ell,\mathcal{F}_\ell)$. After the last shuffle, it turns the cards in a fixed set $T$ with $|T|\le n-1$, and outputs the card at a position $R(T,\boldsymbol{v})\notin T$ that depends on the symbols $\boldsymbol{v}$ of the turned cards. The generator encodes $f(a,b)=a\wedge b$. The formulas are
+Alice's input $a$ is a single-card commitment, and Bob's input $b$ is a two-card commitment. For $\ell=1,\dots,k$, a protocol of the class applies a rearrangement $(\mathsf{perm},\pi_\ell)$ followed by a shuffle $(\mathsf{shuffle},\Pi_\ell,\mathcal{F}_\ell)$. After the last shuffle, it turns the cards in a fixed set $T$ with $\lvert T\rvert\le n-1$, and outputs the card at a position $R(T,\boldsymbol{v})\notin T$ that depends on the symbols $\boldsymbol{v}$ of the turned cards. The generator encodes $f(a,b)=a\wedge b$. Formula (1), with security, is
 
-$$
+```math
 \begin{aligned}
 &\exists\mathcal{P}\ \forall a,b,\mathcal{O}\ \exists\mathcal{X}\ \forall a',b'\ \exists\mathcal{O}',\mathcal{X}':\\
 &\quad\mathrm{Protocol}(\mathcal{P})\wedge\bigl[\mathrm{Valid}(\mathcal{O})\rightarrow\bigl(\mathrm{Trace}(a,b,\mathcal{O},\mathcal{X})\wedge\mathrm{Correct}(a,b,\mathcal{X})\\
 &\qquad\wedge\mathrm{Valid}(\mathcal{O}')\wedge\mathrm{Trace}(a',b',\mathcal{O}',\mathcal{X}')\wedge\mathrm{Same}(\mathcal{X},\mathcal{X}')\bigr)\bigr],
 \end{aligned}
-\tag{1}
-$$
+```
 
-$$
-\exists\mathcal{P}\ \forall a,b,\mathcal{O}\ \exists\mathcal{X}:\ \mathrm{Protocol}(\mathcal{P})\wedge\bigl[\mathrm{Valid}(\mathcal{O})\rightarrow\bigl(\mathrm{Trace}(a,b,\mathcal{O},\mathcal{X})\wedge\mathrm{Correct}(a,b,\mathcal{X})\bigr)\bigr],
-\tag{2}
-$$
+and formula (2), for correctness only, is
+
+```math
+\begin{aligned}
+&\exists\mathcal{P}\ \forall a,b,\mathcal{O}\ \exists\mathcal{X}:\\
+&\quad\mathrm{Protocol}(\mathcal{P})\wedge\bigl[\mathrm{Valid}(\mathcal{O})\rightarrow\bigl(\mathrm{Trace}(a,b,\mathcal{O},\mathcal{X})\wedge\mathrm{Correct}(a,b,\mathcal{X})\bigr)\bigr],
+\end{aligned}
+```
 
 where $\mathcal{P}$ is the tuple of protocol variables, $\mathcal{O}=(\mathcal{O}_1,\dots,\mathcal{O}_k)$ the outcomes of the shuffles, each encoded in binary, and $\mathcal{X}$ the variables of an execution. The last three conjuncts of (1) express possibilistic security.
 
