@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper."
+title: "QBF formulation for card-based AND protocols with mixed encoding"
+type: software
+license: MIT
+version: "1.0"
+date-released: 2026-10-30
+repository-code: "https://github.com/xnlu-math/card-based-cryptography-mixed-encoding-qbf"
+authors:
+  - family-names: Koizumi
+    given-names: Saeki
+  - family-names: Lu
+    given-names: Xiao-Nan
+  - family-names: Nabeshima
+    given-names: Hidetomo
+preferred-citation:
+  type: article
+  title: "Card-Based Protocols with Mixed Encoding: Computable Functions and the Minimum Number of Cards"
+  authors:
+    - family-names: Koizumi
+      given-names: Saeki
+    - family-names: Lu
+      given-names: Xiao-Nan
+    - family-names: Nabeshima
+      given-names: Hidetomo

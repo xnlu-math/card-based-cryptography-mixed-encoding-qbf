@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "description": "Protocols decoded from the stored DepQBF outer existential assignments; each shuffle is realized uniformly.",
+  "protocols": [
+    {
+      "name": "n3_k1_arbitrary_nosec",
+      "source": "outputs/depqbf/n3_k1_arbitrary_nosec.txt",
+      "source_sha256": "626d21b097ab0b74dbe6648c208a71516f10a254e5a060e019c2fcca49954cfc",
+      "input_layout": [
+        "a",
+        "b",
+        "not_b"
+      ],
+      "blocks": [
+        {
+          "rearrangement": [
+            1,
+            3,
+            2
+          ],
+          "outcomes": [
+            {
+              "permutation": [
+                2,
+                3,
+                1
+              ],
+              "probability": "1/1"
+            }
+          ]
+        }
+      ],
+      "turn": [
+        3
+      ],
+      "output": {
+        "0": 2,
+        "1": 1
+      },
+      "expected": {
+        "correct": true,
+        "possibilistic_security": false,
+        "perfect_security": false
+      }
+    },
+    {
+      "name": "n4_k1_rbc_sec",
+      "source": "outputs/depqbf/n4_k1_rbc_sec.txt",
+      "source_sha256": "e33dbce96eeb22bc45ebf7abec5e65c73e65cbf3d7eb24dfdfd242e7fa59baba",
+      "input_layout": [
+        0,
+        "a",
+        "b",
+        "not_b"
+      ],
+      "blocks": [
+        {
+          "rearrangement": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "outcomes": [
+            {
+              "permutation": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "probability": "1/2"
+            },
+            {
+              "permutation": [
+                2,
+                1,
+                4,
+                3
+              ],
+              "probability": "1/2"
+            }
+          ]
+        }
+      ],
+      "turn": [
+        3
+      ],
+      "output": {
+        "0": 1,
+        "1": 2
+      },
+      "expected": {
+        "correct": true,
+        "possibilistic_security": true,
+        "perfect_security": true
+      }
+    },
+    {
+      "name": "n4_k1_closed_sec",
+      "source": "outputs/depqbf/n4_k1_closed_sec.txt",
+      "source_sha256": "788a7e4e8068b0306b6ef22191233588dc85ebc270fc351ba716d86242d824f2",
+      "input_layout": [
+        0,
+        "a",
+        "b",
+        "not_b"
+      ],
+      "blocks": [
+        {
+          "rearrangement": [
+            2,
+            1,
+            4,
+            3
+          ],
+          "outcomes": [
+            {
+              "permutation": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "probability": "1/2"
+            },
+            {
+              "permutation": [
+                2,
+                1,
+                4,
+                3
+              ],
+              "probability": "1/2"
+            }
+          ]
+        }
+      ],
+      "turn": [
+        3
+      ],
+      "output": {
+        "0": 1,
+        "1": 2
+      },
+      "expected": {
+        "correct": true,
+        "possibilistic_security": true,
+        "perfect_security": true
+      }
+    }
+  ]
+}

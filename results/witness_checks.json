@@ -1,0 +1,99 @@
+{
+  "results": [
+    {
+      "name": "n3_k1_arbitrary_nosec",
+      "passed": true,
+      "actual": {
+        "correct": true,
+        "possibilistic_security": false,
+        "perfect_security": false
+      },
+      "expected": {
+        "correct": true,
+        "possibilistic_security": false,
+        "perfect_security": false
+      },
+      "trace_probabilities": {
+        "00": {
+          "1": "1"
+        },
+        "01": {
+          "0": "1"
+        },
+        "10": {
+          "1": "1"
+        },
+        "11": {
+          "0": "1"
+        }
+      },
+      "incorrect_executions": []
+    },
+    {
+      "name": "n4_k1_rbc_sec",
+      "passed": true,
+      "actual": {
+        "correct": true,
+        "possibilistic_security": true,
+        "perfect_security": true
+      },
+      "expected": {
+        "correct": true,
+        "possibilistic_security": true,
+        "perfect_security": true
+      },
+      "trace_probabilities": {
+        "00": {
+          "0": "1/2",
+          "1": "1/2"
+        },
+        "01": {
+          "0": "1/2",
+          "1": "1/2"
+        },
+        "10": {
+          "0": "1/2",
+          "1": "1/2"
+        },
+        "11": {
+          "0": "1/2",
+          "1": "1/2"
+        }
+      },
+      "incorrect_executions": []
+    },
+    {
+      "name": "n4_k1_closed_sec",
+      "passed": true,
+      "actual": {
+        "correct": true,
+        "possibilistic_security": true,
+        "perfect_security": true
+      },
+      "expected": {
+        "correct": true,
+        "possibilistic_security": true,
+        "perfect_security": true
+      },
+      "trace_probabilities": {
+        "00": {
+          "0": "1/2",
+          "1": "1/2"
+        },
+        "01": {
+          "0": "1/2",
+          "1": "1/2"
+        },
+        "10": {
+          "0": "1/2",
+          "1": "1/2"
+        },
+        "11": {
+          "0": "1/2",
+          "1": "1/2"
+        }
+      },
+      "incorrect_executions": []
+    }
+  ]
+}
